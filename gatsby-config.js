@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
+    siteUrl: "http://localhost:1337",
     title: "Dark-Schematic",
   },
   plugins: [
@@ -23,6 +23,15 @@ module.exports = {
         path: "./src/images/",
       },
       __key: "images",
+    },
+    {
+      resolve: "gatsby-source-strapi",
+      options: {
+        apiURL: process.env.API_URL || "http://localhost:1337",
+        collectionTypes: ["action", "bio-updates", "character", "characters-relations", "episodes", "seasons"],
+        //singleTypes: [`homepage`, `global`],
+        queryLimit: 1000,
+      },
     },
   ],
 };
