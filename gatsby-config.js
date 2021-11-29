@@ -3,14 +3,7 @@ module.exports = {
     siteUrl: "http://localhost:1337",
     title: "Dark-Schematic",
   },
-  plugins: [
-    {
-      resolve: 'gatsby-source-prismic',
-      options: {
-      // Along with your other options...
-      shouldDownloadImage: () => true,
-    }
-    },
+  plugins: [   
     "gatsby-plugin-theme-ui",
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
