@@ -9,7 +9,7 @@ const Layout = ({ children }) => (
   <>
       <Seo />
             <div className="container-center-horizontal">
-             <div className="x1920x1080-third-step">
+             <div className="x1920x1080-third-step screen">
                  <main>{children}</main>
             </div>
             </div>

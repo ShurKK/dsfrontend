@@ -4,8 +4,19 @@ import EpisodeCard from "./episode_card";
 const EpisodesComponent = ({ episodes }) => {
 
   return (
-    <div>
-      <div className="uk-child-width-1-2@s" data-uk-grid="true">
+  <div class="overlap-group">
+    <div class="season-picker">
+      <div class="season-box-1">
+        <div class="season-textvalign-text-middleepisodes-titles">SEASON 1</div>
+      </div>
+      <div class="season-box">
+        <div class="season-textvalign-text-middleepisodes-titles">SEASON 2</div>
+      </div>
+      <div class="season-box">
+        <div class="season-textvalign-text-middleepisodes-titles">SEASON 3</div>
+      </div>
+    
+      
         <div className="cards-list">
           {episodes.map((episode, i) => {
             return (
@@ -17,7 +28,8 @@ const EpisodesComponent = ({ episodes }) => {
             );
           })}
         </div>       
-      </div>
+      
+    </div>
     </div>
   );
 };

@@ -8,14 +8,12 @@ const IndexPage = () => {
   const data = useStaticQuery(query);console.log('dsfsdfewflkmsdffs sdfkldsnflkdsjfsd fsdklfnsdlfsd flksdgfnrglkfgoweqngfovlsdvf we fsedfnmsdfsd f'+{data});
 
   return (
-    //<Layout>
-      <>       
+    <Layout>          
         <div className="header">
             <h1 className="text-1 valign-text-middle header-1">{data.strapiHomepage.hero.title}</h1>
         </div>          
-        <EpisodesComponent episodes={data.allStrapiEpisodes.edges} />   
-       </> 
-   // </Layout>
+        <EpisodesComponent episodes={data.allStrapiEpisodes.edges} />       
+    </Layout>
   );
 };
 
