@@ -3,8 +3,7 @@ module.exports = {
     siteUrl: "http://localhost:1337",
     title: "Dark-Schematic",
   },
-  plugins: [   
-    "gatsby-plugin-theme-ui",
+  plugins: [
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
