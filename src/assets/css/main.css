@@ -136,7 +136,7 @@ body {
   width: 290px;
 }
 
-..episode-card-2 {
+.episode-card-2 {
   align-items: flex-end; 
   background-position: 50% 50%;
   background-size: cover;

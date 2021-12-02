@@ -5,12 +5,13 @@ import EpisodesComponent from "../components/episodes";
 import "../assets/css/main.css";
 
 const IndexPage = () => {
-  const data = useStaticQuery(query);console.log('dsfsdfewflkmsdffs sdfkldsnflkdsjfsd fsdklfnsdlfsd flksdgfnrglkfgoweqngfovlsdvf we fsedfnmsdfsd f'+{data});
+  const data = useStaticQuery(query);
+  console.log(data.strapiHomepage);
 
   return (
     <Layout>          
         <div className="header">
-            <h1 className="text-1 valign-text-middle header-1">{data.strapiHomepage.hero.title}</h1>
+            <h1 className="text-1 valign-text-middle header-1">tyrtytry {data.strapiHomepage.hero.title}</h1>
         </div>          
         <EpisodesComponent episodes={data.allStrapiEpisodes.edges} />       
     </Layout>
@@ -22,10 +23,9 @@ const IndexPage = () => {
 const query = graphql`
   query {
     strapiHomepage {
-        id
         hero {
-          id
           title
+          id
         }
         seo {
           metaDescription
