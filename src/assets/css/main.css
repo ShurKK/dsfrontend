@@ -58,13 +58,9 @@ body {
 .season-picker {
   align-items: flex-start;
   border-radius: 16px;
-  display: flex;
-  height: 324px;
+  display: flex;  
   left: 0;
-  min-width: 963px;
-  padding: 0 16px;
-  position: absolute;
-  top: 0;
+  min-width: 963px;    
 }
 
 .season-box-1 {
@@ -109,22 +105,20 @@ body {
   height: 203px;
   left: 16px;
   overflow: hidden;
-  overflow-x: scroll;
-  position: absolute;
-  top: 65px;
-  width: 1888px;
+  overflow-x: scroll;  
+  flex-basis: fit-content;
+  margin: 10px 0;
+  padding: 0 10px;
+  width: fit-content;
 }
 
 .episode-card-1 {
   align-items: flex-end; 
-  background-position: 50% 50%;
-  background-size: cover;
+  flex-direction: column;  
   border-radius: 18px;
-  display: flex;
-  height: 173px;
-  margin-left: 11px;
+  display: flex;   
   overflow: hidden;
-  padding: 11px 0;
+  margin: 10px 10px;
   width: 290px;
 }
 
@@ -136,31 +130,6 @@ body {
   width: 290px;
 }
 
-.episode-card-2 {
-  align-items: flex-end; 
-  background-position: 50% 50%;
-  background-size: cover;
-  border-radius: 18px;
-  display: flex;
-  height: 173px;
-  margin-left: 22px;
-  overflow: hidden;
-  padding: 11px 0;
-  width: 290px;
-}
-
-.episode-card-3 {
-  align-items: flex-end; 
-  background-position: 50% 50%;
-  background-size: cover;
-  border-radius: 18px;
-  display: flex;
-  height: 173px;
-  margin-left: 22px;
-  overflow: hidden;
-  padding: 11px 0;
-  width: 290px;
-}
 
 .episode-card {
   align-items: flex-end;  
@@ -175,17 +144,6 @@ body {
   width: 290px;
 }
 
-.season-picker-1 {
-  align-items: flex-end;
-  display: flex;
-  height: 47px;
-  left: 16px;
-  overflow: hidden;
-  padding: 0 64px;
-  position: absolute;
-  top: 277px;
-  width: 287px;
-}
 
 .characters {
   color: var(--white);
@@ -352,14 +310,10 @@ body {
 
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
 
-.screen a {
-  display: contents;
-  text-decoration: none;
-}
 
 .container-center-horizontal {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   pointer-events: none;
   width: 100%;
