@@ -2,6 +2,7 @@ import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import Layout from "../components/layout";
 import EpisodesComponent from "../components/episodes";
+import CharactersComponent from "../components/characters";
 import "../assets/css/main.css";
 
 const IndexPage = () => {
@@ -11,9 +12,10 @@ const IndexPage = () => {
   return (
     <Layout>          
         <div className="header">
-            <h1 className="text-1 valign-text-middle header-1">tyrtytry {data.strapiHomepage.hero.title}</h1>
+            <h1 className="text-1 valign-text-middle header-1">{data.strapiHomepage.hero.title}</h1>
         </div>          
-        <EpisodesComponent episodes={data.allStrapiEpisodes.edges} />       
+        <EpisodesComponent episodes={data.allStrapiEpisodes.edges} />
+        <CharactersComponent characters={data.allStrapiCharacter.edges} />
     </Layout>
   );
 };
@@ -76,6 +78,46 @@ const query = graphql`
               localFile {
                 childImageSharp 
                 {                    
+                  gatsbyImageData
+                }
+              }
+            }
+          }
+        }
+      }
+      allStrapiCharacter {
+        edges {
+          node {
+            id
+            becomes_known_episode {
+              number
+              id
+            }
+            Name
+            becomes_known_season {
+              id
+              number
+            }
+            general_bio
+            bio_updates {
+              bio_update_text
+              episode
+              photo_update {
+                localFile {
+                  childrenImageSharp {
+                    gatsbyImageData
+                  }
+                }
+              }
+            }
+            Portrait {
+              alternativeText
+              ext
+              height
+              url
+              width
+              localFile {
+                childImageSharp {
                   gatsbyImageData
                 }
               }

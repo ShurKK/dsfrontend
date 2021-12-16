@@ -9,10 +9,8 @@ const Layout = ({ children }) => (
   <>
       <Seo />
       <main>
-         <div className="container-center-horizontal">
-             
-                 {children}
-            
+         <div className="container-center-horizontal">             
+                 {children}            
          </div>
       </main>
    </>
