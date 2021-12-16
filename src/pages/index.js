@@ -8,6 +8,7 @@ import "../assets/css/main.css";
 const IndexPage = () => {
   const data = useStaticQuery(query);
   console.log(data.strapiHomepage);
+  const [state, setState] = React.useState({ picked_episode: 1, picked_season: 1 });
 
   return (
     <Layout>          
@@ -15,7 +16,7 @@ const IndexPage = () => {
             <h1 className="text-1 valign-text-middle header-1">{data.strapiHomepage.hero.title}</h1>
         </div>          
         <EpisodesComponent episodes={data.allStrapiEpisodes.edges} />
-        <CharactersComponent characters={data.allStrapiCharacter.edges} />
+        <CharactersComponent characters={data.allStrapiCharacter.edges} episode={state.picked_episode} />
     </Layout>
   );
 };

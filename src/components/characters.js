@@ -1,7 +1,7 @@
 import React from "react";
 import CharacterCard from "./character_card";
 
-const CharactersComponent = ({ characters }) => {
+const CharactersComponent = ({ characters, episode }) => {
 
   return (
   <>
@@ -9,12 +9,12 @@ const CharactersComponent = ({ characters }) => {
     <div className="cards-list">
       {
         characters.map((character, i) => {
-          return (
+          return ( character.node.becomes_known_episode.number === episode ? 
             <CharacterCard
               character={character}
               key={character.node.name}
-            />
-          );
+            /> : ''
+          ) ;
         })
       }
     </div>
