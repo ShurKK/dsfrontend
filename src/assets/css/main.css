@@ -21,11 +21,6 @@ body {
   background-color: var(--hunter-green);
 }
 
-.selected {
-  background-color: var(--selected);
-}
-
-
 .x1920x1080-second-step {
   align-items: center;
   background-color: var(--hunter-green);
@@ -117,6 +112,9 @@ body {
   width: 290px;
 }
 
+.selected {
+  background-color: var(--selected);
+}
 
 .episode-card {
   align-items: flex-end; 

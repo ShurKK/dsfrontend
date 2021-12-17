@@ -7,7 +7,6 @@ import  ContextContainer  from "../components/context_container";
 const CharacterCard = ({ character }) => {
   const { appState, updateAppState } = useContext(ContextContainer);
   return (
-   // <Link to={`/episode/${episode.node.slug}`} className="uk-link-reset"> // <Img  loading="eager" fluid={episode.node.thumb.localFile.childImageSharp.fluid} />
    <>
    <a href="/" onClick={(e) => showCharacter(e, character)}>
     <div className="episode-card-1">

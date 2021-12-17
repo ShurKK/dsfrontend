@@ -1,30 +1,22 @@
 import React, { useState, useContext } from "react";
+import ContextContainer  from "../components/context_container";
 import EpisodeCard from "./episode_card";
 
-const EpisodesComponent = ({ episodes }) => {
 
+const EpisodesComponent = ({ episodes }) => {
+  const { appState, updateAppState } = useContext(ContextContainer);
   return (
   <>
-    <div className="season-picker">
-      <div className="season-box">
-        <div className="season-text valign-text-middle episodes-titles">SEASON 1</div>
-      </div>
-      <div className="season-box">
-        <div className="season-text valign-text-middle episodes-titles">SEASON 2</div>
-      </div>
-      <div className="season-box">
-        <div className="season-text valign-text-middle episodes-titles">SEASON 3</div>
-      </div>
-    </div>
-      
     <div className="cards-list">
       {
         episodes.map((episode, i) => {
           return (
+            appState.picked_season >= episode.node.season.number ?
             <EpisodeCard
               episode={episode}
               key={episode.node.name}
             />
+            : null
           );
         })
       }

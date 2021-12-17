@@ -13,7 +13,6 @@ const EpisodeCard = ({ episode }) => {
     }; 
 
   return (
-   // <Link to={`/episode/${episode.node.slug}`} className="uk-link-reset"> // <Img  loading="eager" fluid={episode.node.thumb.localFile.childImageSharp.fluid} />
    <>  
    <a href="/" onClick={(e) => {e.preventDefault();updateAppState({ ...appState, picked_episode: episode.node.number }); } }>
       <div className={episodeCardClass}> {/* highlight selected episode */} 

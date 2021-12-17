@@ -4,6 +4,7 @@ import { graphql, useStaticQuery } from "gatsby";
 import Layout from "../components/layout";
 import EpisodesComponent from "../components/episodes";
 import CharactersComponent from "../components/characters";
+import SeasonsComponent from "../components/seasons";
 import "../assets/css/main.css";
 import  ContextContainer  from "../components/context_container";
 
@@ -22,10 +23,11 @@ const IndexPage = () => {
 
   return (
     <ContextContainer.Provider value={{ appState, updateAppState }}>
-    <Layout>        
+    <Layout>
         <div className="header">
             <h1 className="text-1 valign-text-middle header-1">{data.strapiHomepage.hero.title}</h1>
-        </div>          
+        </div>
+        <SeasonsComponent seasons={data.allStrapiSeasons.nodes} />
         <EpisodesComponent episodes={data.allStrapiEpisodes.edges} />
         <CharactersComponent characters={data.allStrapiCharacter.edges}  />
     </Layout>
