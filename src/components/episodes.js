@@ -6,7 +6,7 @@ const EpisodesComponent = ({ episodes }) => {
   return (
   <>
     <div className="season-picker">
-      <div className="season-box-1">
+      <div className="season-box">
         <div className="season-text valign-text-middle episodes-titles">SEASON 1</div>
       </div>
       <div className="season-box">

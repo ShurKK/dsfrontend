@@ -63,14 +63,15 @@ body {
   min-width: 963px;    
 }
 
-.season-box-1 {
+.season-box {
   align-items: center;
   background-color: var(--lunar-green);
   border-radius: 16px;
   display: flex;
-  height: 56px;
+  height: 96px;
   min-width: 287px;
-  padding: 0 87px;
+  justify-content: center;
+  margin:0px 20px 0px 0px;
 }
 
 .season-text {
@@ -79,17 +80,6 @@ body {
   height: 28px;
   min-width: 113px;
   text-align: center;
-}
-
-.season-box {
-  align-items: center;
-  background-color: var(--lunar-green);
-  border-radius: 16px;
-  display: flex;
-  height: 56px;
-  margin-left: 22px;
-  min-width: 287px;
-  padding: 0 87px;
 }
 
 .cards-list::-webkit-scrollbar {
