@@ -170,18 +170,6 @@ body {
   width: 2176px;
 }
 
-.character-card-1 {
-  align-items: flex-start;
-  border-radius: 18px;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  height: 255px;
-  overflow: hidden;
-  padding: 5px 0;
-  width: 220px;
-}
-
 .picture {
   height: 220px;
   object-fit: cover;
@@ -201,11 +189,9 @@ body {
   align-items: flex-start;
   border-radius: 18px;
   display: flex;
-  flex-direction: column;
-  height: 265px;
-  margin-left: 22px;
-  overflow: hidden;
-  padding: 10px 0;
+  flex-direction: column;  
+  margin-left: 10px;
+  overflow: hidden;  
   width: 220px;
 }
 

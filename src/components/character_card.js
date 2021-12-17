@@ -9,15 +9,31 @@ const CharacterCard = ({ character }) => {
   return (
    <>
    <a href="/" onClick={(e) => showCharacter(e, character)}>
-    <div className="episode-card-1">
-        <GatsbyImage
+        <div className="character-card"> {/* cover, contain, fill, inside, outside */}
+         <GatsbyImage
            
             alt={`Picture for ${character.node.name} character`}
-            image={character.node.Portrait[0].localFile.childImageSharp.gatsbyImageData}
+            image={character.node.Portrait[0].localFile.childImageSharp.gatsbyImageData} 
             layout="fullWidth"
-          />    
-        <div className="eposode-name valign-text-middle episodes-titles">{character.node.name}</div>
-    </div>
+            objectFit='cover' 
+            objectPosition="50% 50%"
+            style={ { width: "100%", heigth: "100%", aspectRatio: "1/1"  }}
+          />
+           {/*
+            <Img
+             alt = {`Picture for ${character.node.name} character`}
+             imgStyle={{ objectFit: 'contain' }}
+             style={{ height: "100%", width: "100%" }}
+             placeholderStyle={{ height: "100%", width: "100%" }}
+             fluid = {[
+                    {
+                        ...character.node.Portrait[0].localFile.childImageSharp.fluid, 
+                        media: `(min-width: 768px)`
+                    }
+                ]} />
+            */}
+            <div className="eposode-name valign-text-middle episodes-titles">{character.node.name}</div>
+        </div>
     </a>
     </> 
   );

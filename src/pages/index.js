@@ -131,8 +131,13 @@ const query = graphql`
               height
               url
               width
-              localFile {
-                childImageSharp {
+              localFile {                
+                
+                childImageSharp {                  
+                  fluid(maxWidth: 400, quality: 100) {
+                    ...GatsbyImageSharpFluid
+                    ...GatsbyImageSharpFluidLimitPresentationSize
+                  }
                   gatsbyImageData
                 }
               }
