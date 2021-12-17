@@ -32,7 +32,7 @@ const CharacterCard = ({ character }) => {
                     }
                 ]} />
             */}
-            <div className="eposode-name valign-text-middle episodes-titles">{character.node.name}</div>
+            <div className="name valign-text-middle">{character.node.Name}</div>
         </div>
     </a>
     </> 

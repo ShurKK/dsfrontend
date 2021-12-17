@@ -190,7 +190,7 @@ body {
   border-radius: 18px;
   display: flex;
   flex-direction: column;  
-  margin-left: 10px;
+  margin: 10px;
   overflow: hidden;  
   width: 220px;
 }
