@@ -7,6 +7,8 @@ rgba(23, 37, 19, 1);
 rgba(50, 64, 45, 1);
   --lunar-green: 
 rgba(57, 81, 62, 1);
+ --selected:
+rgba(88, 41, 41, 1);
   --white: 
 rgba(255, 255, 255, 1);
 
@@ -18,6 +20,11 @@ rgba(255, 255, 255, 1);
 body {
   background-color: var(--hunter-green);
 }
+
+.selected {
+  background-color: var(--selected);
+}
+
 
 .x1920x1080-second-step {
   align-items: center;
@@ -102,16 +109,6 @@ body {
   width: fit-content;
 }
 
-.episode-card-1 {
-  align-items: flex-end; 
-  flex-direction: column;  
-  border-radius: 18px;
-  display: flex;   
-  overflow: hidden;
-  margin: 10px 10px;
-  width: 290px;
-}
-
 .eposode-name {
   color: var(--white);
   font-weight: 700;
@@ -122,15 +119,12 @@ body {
 
 
 .episode-card {
-  align-items: flex-end;  
-  background-position: 50% 50%;
-  background-size: cover;
+  align-items: flex-end; 
+  flex-direction: column;  
   border-radius: 18px;
-  display: flex;
-  height: 173px;
-  margin-left: 22px;
+  display: flex;   
   overflow: hidden;
-  padding: 11px 0;
+  margin: 10px 10px;
   width: 290px;
 }
 
