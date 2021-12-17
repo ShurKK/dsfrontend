@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useContext } from "react";
 import EpisodeCard from "./episode_card";
 
 const EpisodesComponent = ({ episodes }) => {

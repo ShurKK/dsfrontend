@@ -1,13 +1,16 @@
 import React from "react";
+import {useContext } from "react";
+import  ContextContainer  from "../components/context_container";
 import { Link } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image"
 import Img from "gatsby-image"
 
 const EpisodeCard = ({ episode }) => {
+  const { appState, updateAppState } = useContext(ContextContainer);
   return (
    // <Link to={`/episode/${episode.node.slug}`} className="uk-link-reset"> // <Img  loading="eager" fluid={episode.node.thumb.localFile.childImageSharp.fluid} />
-   <>
-   <a href="/" onClick={(e) => showEpisode(e, episode.node.id)}>
+   <>  
+   <a href="/" onClick={(e) => {e.preventDefault();updateAppState({ ...appState, picked_episode: episode.node.number }); } }>
     <div className="episode-card-1">
         <GatsbyImage
            
@@ -22,8 +25,5 @@ const EpisodeCard = ({ episode }) => {
   );
 };
 
-function showEpisode(e) {
-  e.preventDefault();
-}
 
 export default EpisodeCard;

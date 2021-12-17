@@ -1,23 +1,35 @@
-import React from "react";
+//import React from "react";
+import React, {  useState, useContext } from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import Layout from "../components/layout";
 import EpisodesComponent from "../components/episodes";
 import CharactersComponent from "../components/characters";
 import "../assets/css/main.css";
+import  ContextContainer  from "../components/context_container";
+
+const initialAppState = {
+  picked_episode: 1, picked_season: 1
+};
 
 const IndexPage = () => {
   const data = useStaticQuery(query);
   console.log(data.strapiHomepage);
-  const [state, setState] = React.useState({ picked_episode: 1, picked_season: 1 });
+
+  // Create context container in a global scope so it can be visible by every component
+  
+  //const [state, setState] = React.useState({ picked_episode: 1, picked_season: 1 });
+  const [appState, updateAppState] = useState(initialAppState);
 
   return (
-    <Layout>          
+    <ContextContainer.Provider value={{ appState, updateAppState }}>
+    <Layout>        
         <div className="header">
             <h1 className="text-1 valign-text-middle header-1">{data.strapiHomepage.hero.title}</h1>
         </div>          
         <EpisodesComponent episodes={data.allStrapiEpisodes.edges} />
-        <CharactersComponent characters={data.allStrapiCharacter.edges} episode={state.picked_episode} />
+        <CharactersComponent characters={data.allStrapiCharacter.edges}  />
     </Layout>
+    </ContextContainer.Provider>
   );
 };
 

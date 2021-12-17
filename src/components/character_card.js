@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image"
-import Img from "gatsby-image"
+import Img from "gatsby-image";
+import  ContextContainer  from "../components/context_container";
 
 const CharacterCard = ({ character }) => {
+  const { appState, updateAppState } = useContext(ContextContainer);
   return (
    // <Link to={`/episode/${episode.node.slug}`} className="uk-link-reset"> // <Img  loading="eager" fluid={episode.node.thumb.localFile.childImageSharp.fluid} />
    <>
@@ -24,7 +26,7 @@ const CharacterCard = ({ character }) => {
 
 function showCharacter(e, character) {
   e.preventDefault();
-  
+  //updateAppState({ ...appState, picked_episode: character.name });
 }
 
 export default CharacterCard;

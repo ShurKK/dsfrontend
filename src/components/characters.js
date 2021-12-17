@@ -1,15 +1,16 @@
-import React from "react";
+import React, { useState, useContext } from "react";
 import CharacterCard from "./character_card";
+import  ContextContainer  from "../components/context_container";
 
-const CharactersComponent = ({ characters, episode }) => {
-
+const CharactersComponent = ({ characters }) => {
+const { appState, updateAppState } = useContext(ContextContainer);
   return (
   <>
     
     <div className="cards-list">
       {
         characters.map((character, i) => {
-          return ( character.node.becomes_known_episode.number === episode ? 
+          return ( appState.picked_episode  >= character.node.becomes_known_episode.number ? 
             <CharacterCard
               character={character}
               key={character.node.name}
