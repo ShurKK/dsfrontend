@@ -9,7 +9,7 @@ const { appState, updateAppState } = useContext(ContextContainer);
     
     <div className="cards-list">
       {
-        characters.map((character, i) => {
+        characters.slice(0).reverse().map((character, i) => {
           return ( appState.picked_episode  >= character.node.becomes_known_episode.number ? 
             <CharacterCard
               character={character}
