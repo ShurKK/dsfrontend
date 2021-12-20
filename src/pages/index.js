@@ -5,6 +5,8 @@ import Layout from "../components/layout";
 import EpisodesComponent from "../components/episodes";
 import CharactersComponent from "../components/characters";
 import SeasonsComponent from "../components/seasons";
+import ActionsComponent from "../components/actions";
+
 import "../assets/css/main.css";
 import  ContextContainer  from "../components/context_container";
 
@@ -30,6 +32,8 @@ const IndexPage = () => {
         <SeasonsComponent seasons={data.allStrapiSeasons.nodes} />
         <EpisodesComponent episodes={data.allStrapiEpisodes.edges} />
         <CharactersComponent characters={data.allStrapiCharacter.edges}  />
+        <ActionsComponent actions={data.allStrapiAction.edges} />
+        
     </Layout>
     </ContextContainer.Provider>
   );
@@ -141,6 +145,42 @@ const query = graphql`
                   gatsbyImageData
                 }
               }
+            }
+          }
+        }
+      }
+      allStrapiAction {
+        edges {
+          node {
+            id
+            Description
+            date_and_time
+            name
+            time_in_episode
+            world
+            media {
+              url
+            }
+            episode {
+              id
+              season
+              name
+              number
+            }
+            characters {          
+              id
+              Name
+              Portrait {
+                localFile {
+                  childImageSharp {
+                    fluid(maxWidth: 400, quality: 100) {
+                      ...GatsbyImageSharpFluid
+                      ...GatsbyImageSharpFluidLimitPresentationSize
+                    }
+                      gatsbyImageData
+                  }
+                }
+              }          
             }
           }
         }

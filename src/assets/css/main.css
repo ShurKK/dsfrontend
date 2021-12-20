@@ -178,11 +178,14 @@ body {
 
 .name {
   color: var(--white);
-  font-weight: 700;
-  height: 20px;
+  font-weight: 700;  
   margin-top: 5px;
   text-align: center;
   width: 220px;
+}
+
+.video {
+  display: flex;
 }
 
 .character-card {
@@ -223,15 +226,13 @@ body {
 }
 
 .actions-in-the-episode {
-  align-items: flex-end;
+  align-items: flex-start;
   background-color: var(--lunar-green);
   border-radius: 16px;
-  display: flex;
-  height: 275px;
+  display: flex;  
   margin-top: 9px;
   overflow: hidden;
-  overflow-x: scroll;
-  width: 1888px;
+  overflow-x: scroll;  
 }
 
 .action-list {
@@ -267,11 +268,11 @@ body {
 
 .action-card {
   align-items: flex-start;
+  align-items: center;
   border-radius: 18px;
   display: flex;
-  flex-direction: column;
-  height: 265px;
-  margin-left: 10px;
+  flex-direction: column;  
+  margin: 10px;
   overflow: hidden;
   width: 393px;
 }
