@@ -10,17 +10,13 @@ import ActionsComponent from "../components/actions";
 import "../assets/css/main.css";
 import  ContextContainer  from "../components/context_container";
 
+// Create context container in a global scope so it can be visible by every component
 const initialAppState = {
-  picked_episode: 1, picked_season: 1
+  picked_episode: 1, picked_season: 1 
 };
 
 const IndexPage = () => {
   const data = useStaticQuery(query);
-  console.log(data.strapiHomepage);
-
-  // Create context container in a global scope so it can be visible by every component
-  
-  //const [state, setState] = React.useState({ picked_episode: 1, picked_season: 1 });
   const [appState, updateAppState] = useState(initialAppState);
 
   return (

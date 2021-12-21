@@ -10,7 +10,7 @@ const ActionCard = ({ action }) => {
   return (
    <>
    <a href="/" onClick={(e) => showAction(e, action)}>
-        <div className="action-card"> {/* cover, contain, fill, inside, outside */}
+        <div className="action-card">
             <Video
                 videoSrcURL={action.node.media[0].url}
                 videoTitle={action.node.name}
