@@ -26,7 +26,7 @@ const IndexPage = () => {
             <h1 className="text-1 valign-text-middle header-1">{data.strapiHomepage.hero.title}</h1>
         </div>
         <SeasonsComponent seasons={data.allStrapiSeasons.nodes} />
-        <EpisodesComponent episodes={data.allStrapiEpisodes.edges} />
+        <EpisodesComponent episodes={data.allStrapiEpisodes.edges.sort(function(a, b){return a.node.number - b.node.number})} />
         <CharactersComponent characters={data.allStrapiCharacter.edges}  />
         <ActionsComponent actions={data.allStrapiAction.edges} />
         
