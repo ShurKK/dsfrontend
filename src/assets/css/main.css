@@ -112,6 +112,14 @@ body {
   width: 290px;
 }
 
+.episode-number {
+  font-weight: 700;
+  color: var(--white);
+  font-size: 30pt;
+  color: rgba(255, 255, 255, 0.55);   
+  align-items: center;
+}
+
 .selected {
   background-color: var(--selected);
 }

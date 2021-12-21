@@ -15,6 +15,7 @@ const EpisodeCard = ({ episode }) => {
   return (
    <>  
    <a href="/" onClick={(e) => {e.preventDefault();updateAppState({ ...appState, picked_episode: episode.node.number }); } }>
+      <div className="episode-number valign-text-middle">{episode.node.number}</div>
       <div className={episodeCardClass}> {/* highlight selected episode */} 
         <GatsbyImage
            
