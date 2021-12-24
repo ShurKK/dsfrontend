@@ -11,7 +11,7 @@ const EpisodesComponent = ({ episodes }) => {
       {
         episodes.map((episode, i) => {
           return (
-            appState.picked_season >= episode.node.season.number ?
+            appState.picked_season == episode.node.season.number ?
             <EpisodeCard
               episode={episode}
               key={episode.node.name}
