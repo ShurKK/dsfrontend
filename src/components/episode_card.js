@@ -13,9 +13,7 @@ const EpisodeCard = ({ episode }) => {
     }; 
 
   return (
-   <>  
-   <a href="/" onClick={(e) => {e.preventDefault();updateAppState({ ...appState, picked_episode: episode.node.number }); } }>      
-      <div className={episodeCardClass}>
+    <div className={episodeCardClass} onClick={(e) => {e.preventDefault();updateAppState({ ...appState, picked_episode: episode.node.number }); } }>
         <div className="episode-number valign-text-middle">{String(episode.node.number).padStart(2,'0')}</div>
         <GatsbyImage           
             alt={`Picture for ${episode.node.name} episode`}
@@ -24,8 +22,6 @@ const EpisodeCard = ({ episode }) => {
           />    
         <div className="eposode-name valign-text-middle episodes-titles">{episode.node.name}</div>
     </div>
-    </a>
-    </> 
   );
 };
 
