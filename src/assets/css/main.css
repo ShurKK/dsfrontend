@@ -113,11 +113,14 @@ body {
 }
 
 .episode-number {
-  font-weight: 700;
-  color: var(--white);
+  font-weight: 700;  
   font-size: 30pt;
-  color: rgba(255, 255, 255, 0.55);   
+  color: rgb(155 55 55 / 74%);   
   align-items: center;
+  position: absolute;
+  left: 20px;
+  top: 5px;
+  z-index: 20;
 }
 
 .selected {
@@ -132,6 +135,7 @@ body {
   overflow: hidden;
   margin: 10px 10px;
   width: 290px;
+  position: relative;
 }
 
 
