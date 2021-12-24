@@ -93,15 +93,13 @@ body {
   align-items: center;
   background-color: var(--lunar-green);
   border-radius: 14px;
-  display: flex;
-  height: 203px;
+  display: flex;  
   left: 16px;
   overflow: hidden;
   overflow-x: scroll;  
-  flex-basis: fit-content;
+  flex: 1 0 auto;
   margin: 10px 0;
-  padding: 0 10px;
-  width: fit-content;
+  padding: 0 10px;  
 }
 
 .eposode-name {
@@ -208,6 +206,8 @@ body {
   margin: 10px;
   overflow: hidden;  
   width: 220px;
+  cursor: pointer;
+  flex: 1 0 auto;
 }
 
 .season-picker-2 {
@@ -298,6 +298,7 @@ body {
   justify-content: center;
   pointer-events: none;
   width: 100%;
+  overflow-x: auto;
 }
 
 .container-center-horizontal > * {

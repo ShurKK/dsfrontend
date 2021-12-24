@@ -5,9 +5,7 @@ import  ContextContainer  from "../components/context_container";
 const CharacterCard = ({ character }) => {
   const { appState, updateAppState } = useContext(ContextContainer);
   return (
-   <>
-   <a href="/" onClick={(e) => showCharacter(e, character)}>
-        <div className="character-card"> 
+    <div className="character-card" onClick={(e) => showCharacter(e, character)}> 
          <GatsbyImage           
             alt={`Picture for ${character.node.name} character`}
             image={character.node.Portrait[0].localFile.childImageSharp.gatsbyImageData} 
@@ -17,9 +15,7 @@ const CharacterCard = ({ character }) => {
             style={ { width: "100%", heigth: "100%", aspectRatio: "1/1"  }}
           />
           <div className="name valign-text-middle">{character.node.Name}</div>
-        </div>
-    </a>
-    </> 
+    </div>    
   );
 };
 
