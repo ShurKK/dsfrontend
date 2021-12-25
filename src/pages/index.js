@@ -155,21 +155,8 @@ const query = graphql`
             time_in_episode
             world
             media {              
-              mobileImage: localFile {
+              localFile {
                 childImageSharp {
-                  fluid(maxWidth: 500, quality: 100) {
-                    ...GatsbyImageSharpFluid
-                    ...GatsbyImageSharpFluidLimitPresentationSize
-                  }
-                  gatsbyImageData
-                }        
-              }
-              desktopImage: localFile {
-                childImageSharp {
-                  fluid(maxWidth: 1000, quality: 100) {
-                    ...GatsbyImageSharpFluid
-                    ...GatsbyImageSharpFluidLimitPresentationSize
-                  }
                   gatsbyImageData
                 }
               }

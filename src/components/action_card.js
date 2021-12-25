@@ -13,10 +13,10 @@ const ActionCard = ({ action }) => {
    <a href="/" onClick={(e) => showAction(e, action)}>
         <div className="action-card">
            {
-            action.node?.media[0]?.mobileImage?.childImageSharp?.gatsbyImageData ? 
+            action.node?.media[0]?.localFile?.childImageSharp?.gatsbyImageData ? 
                 <GatsbyImage
                     alt={`Picture for ${action.node.name} action`}
-                    image={action.node.media[0].mobileImage.childImageSharp.gatsbyImageData}
+                    image={action.node.media[0].localFile.childImageSharp.gatsbyImageData}
                     layout="fullWidth"            
                     objectFit='cover' 
                     objectPosition="50% 50%"
