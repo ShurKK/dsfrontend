@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SeasonsComponent /> renders correctly 1`] = `
+<Fragment>
+  <div
+    className="season-picker"
+  >
+    <SeasonCard
+      key="first01"
+      season={
+        Object {
+          "name": "first01",
+          "number": 1,
+        }
+      }
+    />
+    <SeasonCard
+      key="second02"
+      season={
+        Object {
+          "name": "second02",
+          "number": 2,
+        }
+      }
+    />
+  </div>
+</Fragment>
+`;
