@@ -19,6 +19,9 @@ const EpisodeCard = ({ episode }) => {
             alt={`Picture for ${episode.node.name} episode`}
             image={episode.node.thumb.localFile.childImageSharp.gatsbyImageData}
             layout="fullWidth"
+            objectFit='cover' // cover, contain, fill, inside, outside
+            objectPosition="50% 50%"
+            style={ { width: "100%", heigth: "100%", aspectRatio: "16/9"  }}
           />    
         <div className="eposode-name valign-text-middle episodes-titles">{episode.node.name}</div>
     </div>

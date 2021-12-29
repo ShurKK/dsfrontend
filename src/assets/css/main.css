@@ -133,6 +133,7 @@ body {
   overflow: hidden;
   margin: 10px 10px;
   width: 270px;
+  min-width: 270px;
   position: relative;
   cursor: pointer;
 }
