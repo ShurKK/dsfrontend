@@ -8,7 +8,8 @@ import SeasonsComponent from "../components/seasons";
 import ActionsComponent from "../components/actions";
 import Seo from "../components/seo"
 import "../assets/css/main.css";
-import  ContextContainer  from "../components/context_container";
+import ContextContainer from "../components/context_container";
+import Header from "../components/header";
 
 // Create context container in a global scope so it can be visible by every component
 const initialAppState = {
@@ -23,14 +24,11 @@ const IndexPage = () => {
     <ContextContainer.Provider value={{ appState, updateAppState }}>
     <Layout>
         <Seo title={data.strapiHomepage.hero.title} meta={ [ { name: `keywords`, content: data.strapiHomepage.seo.metaTags } ] } />
-        <div className="header">
-            <h1 className="text-1 valign-text-middle header-1">{data.strapiHomepage.hero.title}</h1>
-        </div>
+        <Header heroTitle = { data.strapiHomepage.hero.title } />        
         <SeasonsComponent seasons={data.allStrapiSeasons.nodes} />
         <EpisodesComponent episodes={data.allStrapiEpisodes.edges.sort(function(a, b){return a.node.number - b.node.number})} />
         <CharactersComponent characters={data.allStrapiCharacter.edges}  />
         <ActionsComponent actions={data.allStrapiAction.edges} />
-        
     </Layout>
     </ContextContainer.Provider>
   );

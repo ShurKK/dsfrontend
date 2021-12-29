@@ -33,11 +33,11 @@ body {
 
 .header {
   align-items: flex-start;
+  justify-content: space-around;
   display: flex;
   height: 84px;
   margin-right: 5.0px;
   padding: 8px 0;
-  width: 955px;
 }
 
 .text-1 {
@@ -45,8 +45,7 @@ body {
   font-weight: 400;
   height: 57px;
   margin-left: 2px;
-  text-align: center;
-  width: 953px;
+  text-align: center;  
 }
 
 .overlap-group {
