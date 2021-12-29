@@ -2,6 +2,7 @@ module.exports = {
   siteMetadata: {
     siteUrl: "http://localhost:1337",
     title: "Dark-Schematic",
+    description: "Website dedicated to the NetFlix series called Dark. Complicated bundle of time travels and their dependencies"
   },
   plugins: [
     "gatsby-plugin-image",

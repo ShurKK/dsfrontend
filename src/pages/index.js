@@ -6,7 +6,7 @@ import EpisodesComponent from "../components/episodes";
 import CharactersComponent from "../components/characters";
 import SeasonsComponent from "../components/seasons";
 import ActionsComponent from "../components/actions";
-
+import Seo from "../components/seo"
 import "../assets/css/main.css";
 import  ContextContainer  from "../components/context_container";
 
@@ -22,6 +22,7 @@ const IndexPage = () => {
   return (
     <ContextContainer.Provider value={{ appState, updateAppState }}>
     <Layout>
+        <Seo title={data.strapiHomepage.hero.title} meta={ [ { name: `keywords`, content: data.strapiHomepage.seo.metaTags } ] } />
         <div className="header">
             <h1 className="text-1 valign-text-middle header-1">{data.strapiHomepage.hero.title}</h1>
         </div>
@@ -48,6 +49,7 @@ const query = graphql`
           metaDescription
           metaTitle
           id
+          metaTags
         }
       }
       allStrapiSeasons {
