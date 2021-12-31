@@ -6,14 +6,15 @@ import EpisodesComponent from "../components/episodes";
 import CharactersComponent from "../components/characters";
 import SeasonsComponent from "../components/seasons";
 import ActionsComponent from "../components/actions";
-import Seo from "../components/seo"
+import Seo from "../components/seo";
+import CharacterBio from "../components/character_bio";
 import "../assets/css/main.css";
 import ContextContainer from "../components/context_container";
 import Header from "../components/header";
 
 // Create context container in a global scope so it can be visible by every component
 const initialAppState = {
-  picked_episode: 1, picked_season: 1 
+  picked_episode: 1, picked_season: 1, picked_character_id: null
 };
 
 const IndexPage = () => {
@@ -28,6 +29,7 @@ const IndexPage = () => {
         <SeasonsComponent seasons={data.allStrapiSeasons.nodes} />
         <EpisodesComponent episodes={data.allStrapiEpisodes.edges.sort(function(a, b){return a.node.number - b.node.number})} />
         <CharactersComponent characters={data.allStrapiCharacter.edges}  />
+        <CharacterBio characters={data.allStrapiCharacter.edges} bio_updates={data.allStrapiBioUpdates.edges} />
         <ActionsComponent actions={data.allStrapiAction.edges} />
     </Layout>
     </ContextContainer.Provider>
@@ -116,7 +118,10 @@ const query = graphql`
             general_bio
             bio_updates {
               bio_update_text
+              id
+              name_update
               episode
+              season
               photo_update {
                 localFile {
                   childrenImageSharp {
@@ -191,6 +196,34 @@ const query = graphql`
           title
           description
           siteUrl
+        }
+      }
+      allStrapiBioUpdates {
+        edges {
+          node {
+            bio_update_text
+            character {
+              id
+            }
+            episode {
+              id
+              name
+              number
+            }
+            name_update
+            photo_update {
+              localFile {
+                childImageSharp {
+                  gatsbyImageData
+                }
+              }
+            }
+            season {
+              id
+              name
+              number
+            }
+          }
         }
       }
     }

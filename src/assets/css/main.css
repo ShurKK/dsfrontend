@@ -125,8 +125,8 @@ body {
 }
 
 .episode-card {
-  align-items: flex-end; 
-  flex-direction: column;  
+  align-items: flex-end;
+  flex-direction: column;
   border-radius: 18px;
   display: flex;   
   overflow: hidden;
@@ -137,6 +137,34 @@ body {
   cursor: pointer;
 }
 
+.bio-wrapper {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  align-items: center;
+  flex: 1 0 auto;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.bio {
+  align-items: center;
+  background-color: var(--lunar-green);
+  display: flex;
+  flex-direction: column;
+  border-radius: 18px;
+  padding: 10px;
+  width: 270px;
+  min-width: 270px;
+  min-height: 100px;
+  position: relative;
+}
+
+.bio-text {
+  color: var(--white);
+  font-weight: 400;
+  text-align: center;
+}
 
 .characters {
   color: var(--white);
