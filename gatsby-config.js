@@ -29,7 +29,7 @@ module.exports = {
       options: {
         apiURL: process.env.API_URL || "http://localhost:1337",
         collectionTypes: ["action", "bio-updates", "character", "characters-relations", "episodes", "seasons"],
-        singleTypes: [`homepage`],
+        singleTypes: [`homepage`, `header`],
         queryLimit: 1000,
       },
     },

@@ -5,7 +5,7 @@ const Header = ({ heroTitle }) => {
   const { appState, updateAppState } = useContext(ContextContainer);
   return (
     <header className="header">
-        <h1 className="text-1 valign-text-middle header-1">{ heroTitle }</h1>
+        <h1 className="text-1 valign-text-middle header">{ heroTitle }</h1>
     </header>
   );
 };

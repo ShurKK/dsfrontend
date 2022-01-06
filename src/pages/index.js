@@ -23,9 +23,9 @@ const IndexPage = () => {
 
   return (
     <ContextContainer.Provider value={{ appState, updateAppState }}>
-    <Layout>
+    <Layout header = {data.strapiHeader}>
         <Seo title={data.strapiHomepage.hero.title} meta={ [ { name: `keywords`, content: data.strapiHomepage.seo.metaTags } ] } />
-        <Header heroTitle = { data.strapiHomepage.hero.title } />        
+        <Header heroTitle = { data.strapiHomepage.hero.title } header = { data.strapiHeader } />
         <SeasonsComponent seasons={data.allStrapiSeasons.nodes} />
         <EpisodesComponent episodes={data.allStrapiEpisodes.edges.sort(function(a, b){return a.node.number - b.node.number})} />
         <CharactersComponent characters={data.allStrapiCharacter.edges}  />
@@ -50,6 +50,16 @@ const query = graphql`
           metaTitle
           id
           metaTags
+        }
+      }
+      strapiHeader {
+        background {
+          url
+          localFile {
+            childImageSharp {
+              gatsbyImageData
+            }
+          }
         }
       }
       allStrapiSeasons {

@@ -21,6 +21,12 @@ body {
   background-color: var(--hunter-green);
 }
 
+.footer {
+  height: 400px;
+  width: 100%;
+  clear: both;
+}
+
 .x1920x1080-second-step {
   align-items: center;
   background-color: var(--hunter-green);
