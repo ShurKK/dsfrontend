@@ -18,13 +18,15 @@ const CharacterBio = ({ characters, bio_updates }) => {
     <div className = "bio-wrapper">   
         <div className = "bio bio-text">
             <h3>{character.node.Name} info known on S{appState.picked_season}:E{appState.picked_episode}</h3>
-                <h4>General bio</h4>
+                <div className = "bio-update-episode">
+                    <h4>General bio</h4>
                     <p>{character.node.general_bio}</p>
-                        {
-                            bio_updates_filtered?.map( (update,i) => {  // get all bio updates for selceted character
-                               return <><h4>S{update.node.season.number}:E{update.node.episode.number} update</h4><p>{update.node.bio_update_text}</p></>
-                            })
-                        }
+                </div>
+                {
+                    bio_updates_filtered?.map( (update,i) => {  // get all bio updates for selceted character
+                               return <div className = "bio-update-episode"><h4>S{update.node.season.number}:E{update.node.episode.number} update</h4><p>{update.node.bio_update_text}</p></div>
+                    })
+                }
         </div> 
     </div>  
   );

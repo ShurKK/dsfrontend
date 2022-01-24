@@ -9,6 +9,8 @@ rgba(50, 64, 45, 1);
 rgba(57, 81, 62, 1);
  --selected:
 rgba(88, 41, 41, 1);
+ --table-cell:
+rgba(68, 124, 81, 1);
   --white: 
 rgba(255, 255, 255, 1);
 
@@ -170,6 +172,12 @@ body {
   color: var(--white);
   font-weight: 400;
   text-align: center;
+}
+
+.bio-update-episode {
+  width: 100%;
+  background-color: var(--table-cell);
+  margin-bottom: 10px;
 }
 
 .characters {
