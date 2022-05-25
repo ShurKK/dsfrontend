@@ -5,7 +5,7 @@ import  ContextContainer  from "../components/context_container";
 const CharacterCard = ({ character }) => {
   const { appState, updateAppState } = useContext(ContextContainer);
   let characterCardClass = "character-card";
-  if (appState.picked_character_id == character.node.id) { // highlight selected episode
+  if (appState.picked_character_id == character.node.id) { // highlight selected character
     characterCardClass = "character-card selected"
     };
   return (
