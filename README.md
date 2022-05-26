@@ -4,36 +4,59 @@
   </a>
 </p>
 <h1 align="center">
-  Gatsby minimal starter
+  Gatsby app to easily create fun website of any tv series that has many characters and complex hirarchy
 </h1>
 
 ## 🚀 Quick start
 
-1.  **Create a Gatsby site.**
-
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
+1.  **Clone and setup strapi server.**
+    
+    Use Terminal to create new strapi project with predifined structure
 
     ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
+    git clone https://github.com/ShurKK/dark_schematic.git
     ```
 
-2.  **Start developing.**
+2. **Add some content to Strpi CMS**
+
+    Read Strapi documenation and make sure the server is running and you can login to its CMS. Then create some content using predifined structure
+
+3.  **Clone the project into local folder.**
+
+    Use Terminal to create a new project.
+
+    ```shell
+    # create a new fun website project
+    git clone https://github.com/ShurKK/dsfrontend.git
+    ```
+4.  **Adjust settings file and connect it to your strapi server.**
+
+    gatsby-config.js
+
+5.  **Create .env file**
+
+    This whould looks like 
+    ```shell
+    # Settings of Gatsby port
+    GATSBY_ROOT_URL=http://localhost:8000
+
+    # Serrings of connection port to strapi
+    API_URL=http://127.0.0.1:1337
+    ```
+
+6.  **Start the server.**
 
     Navigate into your new site’s directory and start it up.
 
     ```shell
-    cd my-gatsby-site/
+    cd dsfrontend/
     npm run develop
     ```
 
-3.  **Open the code and start customizing!**
-
     Your site is now running at http://localhost:8000!
 
-    Edit `src/pages/index.js` to see your site update in real-time!
 
-4.  **Learn more**
+7.  **Learn more about Gatsby project**
 
     - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
 
