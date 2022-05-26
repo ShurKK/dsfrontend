@@ -14,8 +14,11 @@ const CharacterCard = ({ character }) => {
 
 
   return (
-    <div className={characterCardClass} onClick={(e) => {e.preventDefault();updateAppState({ ...appState, picked_character_id: character.node.id }); } }>
-         <GatsbyImage           
+    <div className={characterCardClass}
+         role = "button"
+         onClick={   (e) => { e.preventDefault(); updateAppState({ ...appState, picked_character_id: character.node.id }); } }
+         onKeyDown={ (e) => { e.preventDefault(); updateAppState({ ...appState, picked_character_id: character.node.id }); } } >
+         <GatsbyImage
             alt={`Picture for ${character.node.name} character`}
             image={character.node.Portrait[0].localFile.childImageSharp.gatsbyImageData} 
             layout="fullWidth"
